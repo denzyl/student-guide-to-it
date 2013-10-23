@@ -1,0 +1,219 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+
+body {
+    /*background: url("background.jpg") repeat;*/
+    background: rgb(237,239, 240);
+    min-height: 2000px;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    color: #444;
+    padding-top: 90px;
+}
+
+div {
+    display: block;
+}
+
+a[name] {
+  padding-top: 65px;
+  margin-top: -15px;
+  display: inline-block; /* required for webkit browsers */
+}
+
+.container {
+    max-width:970px;
+    margin: auto auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.container:after{
+    clear:both;
+}
+
+.row {
+    margin-left:-15px;
+    margin-right: -15px;
+    margin-bottom: 20px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
+}
+
+.col-half {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-two-third {
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    padding: 20px;
+    width: 66.66%;
+    float: right;
+    padding-right: 30px;
+}
+
+.col-one-third {
+    width: 33.333333%;
+    float: left;
+}
+
+p.intro {
+    margin: 0 auto;
+    text-align: justify;
+    width: 85%;
+}
+#wrapper {
+    max-width:980px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: #777777;
+    border: 1px solid #e7e7e7;
+    min-height: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.navbar .container .site-name {
+    font-size: 1.5em;
+    padding-top:15px;
+}
+
+.navbar-fixed-top {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    position:fixed;
+}
+.navbar ul.nav {
+    margin: 0 auto;
+}
+
+.navbar ul.nav li {
+    font-size: 1.4em;
+    padding: 15px;
+    display: inline-block;
+}
+
+.navbar ul.nav li a {
+    text-decoration: none;
+    color: #444;
+}
+
+.navbar ul.nav li a:hover {
+    text-decoration: underline;
+}
+.names {
+    font-size: 2.2em;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.2em;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+h4 {
+    padding-bottom:5px;
+}
+/*.welcome p, .arrive p, .oncampus p, .user-account p, .apps p, .mayday p, */
+p, ol, ul {
+    font-size: .85em;
+    line-height: 1.5em;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+li ul {
+    font-size: 100%;
+}
+
+img.responsive
+{
+/*    position: absolute;*/
+    max-width: 100%;
+    top: 10%;
+    left: 13%;
+    border-radius: 2px;
+/*    box-shadow: 0 3px 6px rgba(0,0,0,0.9);*/
+}
+
+img.responsive:empty
+{
+    {
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+}
+
+ol, .col-two-third ul {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+@media screen and (orientation: portrait) {
+  img.responsive {
+      max-width: 90%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  img.responsive {
+      max-height: 90%;
+  }
+}
